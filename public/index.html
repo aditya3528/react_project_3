@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard - Posts</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Welcome to the Post Dashboard</h1>
+    <div id="userInfo"></div>
+    <button onclick="logout()">Logout</button>
+  </header>
+
+  <main>
+    <section id="postCreation">
+      <h2>Add a New Post</h2>
+      <form id="postForm">
+        <input type="text" id="title" placeholder="Title" required />
+        <textarea id="content" placeholder="Content" required></textarea>
+        <button type="submit">Add Post</button>
+      </form>
+    </section>
+
+    <section id="postEdit" style="display:none;">
+      <h2>Edit Post</h2>
+      <form id="editForm">
+        <input type="text" id="editTitle" placeholder="Edit Title" required />
+        <textarea id="editContent" placeholder="Edit Content" required></textarea>
+        <div>
+          <button type="submit">Update Post</button>
+          <button type="button" onclick="cancelEdit()">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="postsSection">
+      <h2>All Posts</h2>
+      <div id="posts"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
